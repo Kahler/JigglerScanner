@@ -792,6 +792,13 @@ parentViewController:(UIViewController*)parentViewController
     
     [overlayView addSubview: toolbar];
     
+    UIImage* jigglerLogo   = [UIImage imageNamed:@"LOGO.png"];
+    UIView* logoView       =[[[UIImageView alloc] initWithImage: jigglerLogo] autorelease];
+    CGRect  logoArea       = CGRectMake(rootViewWidth/2 - jigglerLogo.width/2, 10, jigglerLogo.width, jigglerLogo.height);
+    
+    [logoView setFrame:logoArea];
+    [overlayView addSubview: logoView];
+    
     UIImage* reticleImage = [self buildReticleImage];
     UIView* reticleView = [[[UIImageView alloc] initWithImage: reticleImage] autorelease];
     CGFloat minAxis = MIN(rootViewHeight, rootViewWidth);
