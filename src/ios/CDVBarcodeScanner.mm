@@ -837,7 +837,7 @@ parentViewController:(UIViewController*)parentViewController
     if (self.processor.is1D) {
         UIColor* color = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:RETICLE_ALPHA];
         CGContextSetStrokeColorWithColor(context, color.CGColor);
-        CGContextSetLineWidth(context, RETICLE_WIDTH);
+        CGContextSetLineWidth(context, 0);
         CGContextBeginPath(context);
         CGFloat lineOffset = RETICLE_OFFSET+(0.5*RETICLE_WIDTH);
         CGContextMoveToPoint(context, lineOffset, RETICLE_SIZE/2);
