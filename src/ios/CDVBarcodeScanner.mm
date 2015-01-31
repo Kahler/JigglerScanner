@@ -753,7 +753,6 @@ parentViewController:(UIViewController*)parentViewController
     id cancelButton = [[[UIBarButtonItem alloc] autorelease]
                        initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
                        target:(id)self
-                       setTitle: @"Annuler"
                        action:@selector(cancelButtonPressed:)
                        ];
     
