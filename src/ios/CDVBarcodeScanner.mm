@@ -710,7 +710,7 @@ parentViewController:(UIViewController*)parentViewController
 
 //--------------------------------------------------------------------------
 - (IBAction)cancelButtonPressed:(id)sender {
-    [cancelButton setTitle:@"Annuler" forState:UIControlStateNormal];
+    [sender setTitle:@"Annuler" forState:UIControlStateNormal];
 
     //[self.processor performSelector:@selector(barcodeScanCancelled) withObject:nil afterDelay:0];
 }
