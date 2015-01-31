@@ -756,11 +756,12 @@ parentViewController:(UIViewController*)parentViewController
 //                       action:@selector(cancelButtonPressed:)
 //                       ];
     
-    id cancelButton = [[[UIBarButtonItem alloc]
-                        initWithTitle:@"Annuler"
-                        style:UIBarButtonItemStylePlain
-                        target:(id)self
-                        action:@selector(cancelButtonPressed)] autorelease];
+    id cancelButton = [[[UIBarButtonItem alloc] autorelease]
+                       initWithTitle:@"Annuller"
+                       style:UIBarButtonItemStylePlain
+                       target:(id)self
+                       action:@selector(cancelButtonPressed:)
+                       ];
     
     id flexSpace = [[[UIBarButtonItem alloc] autorelease]
                     initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
