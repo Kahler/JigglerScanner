@@ -711,7 +711,6 @@ parentViewController:(UIViewController*)parentViewController
 //--------------------------------------------------------------------------
 - (IBAction)cancelButtonPressed:(id)sender {
     [self.processor performSelector:@selector(barcodeScanCancelled) withObject:nil afterDelay:0];
-    [sender setTitle:@"Annuler" forState:UIControlStateNormal];
 }
 
 - (void)flipCameraButtonPressed:(id)sender
@@ -757,9 +756,6 @@ parentViewController:(UIViewController*)parentViewController
                        action:@selector(cancelButtonPressed:)
                        ];
     
-    [cancelButton setTitle:@"Annuler"];
-    
-    
     id flexSpace = [[[UIBarButtonItem alloc] autorelease]
                     initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
                     target:nil
@@ -779,6 +775,8 @@ parentViewController:(UIViewController*)parentViewController
                         target:(id)self
                         action:@selector(shutterButtonPressed)
                         ];
+    
+    [cancelButton setTitle:@"Annuler"];
     
     toolbar.items = [NSArray arrayWithObjects:flexSpace,cancelButton,flexSpace ,shutterButton,nil];
 #else
@@ -807,6 +805,8 @@ parentViewController:(UIViewController*)parentViewController
                           );
     
     [reticleView setFrame:rectArea];
+    
+    [cancelButton setTitle:@"Annuler"];
     
     reticleView.opaque           = NO;
     reticleView.contentMode      = UIViewContentModeScaleAspectFit;
