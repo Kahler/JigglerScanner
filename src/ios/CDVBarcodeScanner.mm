@@ -711,6 +711,7 @@ parentViewController:(UIViewController*)parentViewController
 //--------------------------------------------------------------------------
 - (IBAction)cancelButtonPressed:(id)sender {
     [self.processor performSelector:@selector(barcodeScanCancelled) withObject:nil afterDelay:0];
+    [sender setTitle:@"Annuler" forState:UIControlStateNormal];
 }
 
 - (void)flipCameraButtonPressed:(id)sender
@@ -755,6 +756,8 @@ parentViewController:(UIViewController*)parentViewController
                        target:(id)self
                        action:@selector(cancelButtonPressed:)
                        ];
+    
+    [cancelButton setTitle:@"Annuler"];
     
     
     id flexSpace = [[[UIBarButtonItem alloc] autorelease]
