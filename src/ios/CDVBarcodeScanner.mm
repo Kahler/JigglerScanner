@@ -753,6 +753,7 @@ parentViewController:(UIViewController*)parentViewController
     id cancelButton = [[[UIBarButtonItem alloc] autorelease]
                        initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
                        target:(id)self
+                       setTitle: @"Annuler"
                        action:@selector(cancelButtonPressed:)
                        ];
     
@@ -775,8 +776,6 @@ parentViewController:(UIViewController*)parentViewController
                         target:(id)self
                         action:@selector(shutterButtonPressed)
                         ];
-    
-    [cancelButton setTitle:@"Annuler"];
     
     toolbar.items = [NSArray arrayWithObjects:flexSpace,cancelButton,flexSpace ,shutterButton,nil];
 #else
@@ -805,8 +804,6 @@ parentViewController:(UIViewController*)parentViewController
                           );
     
     [reticleView setFrame:rectArea];
-    
-    [cancelButton setTitle:@"Annuler"];
     
     reticleView.opaque           = NO;
     reticleView.contentMode      = UIViewContentModeScaleAspectFit;
