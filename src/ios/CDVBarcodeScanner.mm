@@ -768,7 +768,8 @@ parentViewController:(UIViewController*)parentViewController
                        target:(id)self
                        action:@selector(flipCameraButtonPressed:)
                        ];
-
+    
+    cancelButton.title = @"Annuler";
     
 #if USE_SHUTTER
     id shutterButton = [[UIBarButtonItem alloc]
@@ -804,6 +805,8 @@ parentViewController:(UIViewController*)parentViewController
                           );
     
     [reticleView setFrame:rectArea];
+    
+    
     
     reticleView.opaque           = NO;
     reticleView.contentMode      = UIViewContentModeScaleAspectFit;
