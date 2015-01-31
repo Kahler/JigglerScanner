@@ -762,8 +762,6 @@ parentViewController:(UIViewController*)parentViewController
                         target:(id)self
                         action:@selector(cancelButtonPressed)] autorelease];
     
-    [cancelButton setTitle:@"Annuler" forState:UIControlStateNormal];
-    
     id flexSpace = [[[UIBarButtonItem alloc] autorelease]
                     initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
                     target:nil
