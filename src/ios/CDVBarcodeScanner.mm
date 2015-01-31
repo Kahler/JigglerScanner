@@ -710,7 +710,9 @@ parentViewController:(UIViewController*)parentViewController
 
 //--------------------------------------------------------------------------
 - (IBAction)cancelButtonPressed:(id)sender {
-    [self.processor performSelector:@selector(barcodeScanCancelled) withObject:nil afterDelay:0];
+    [cancelButton setTitle:@"Annuler" forState:UIControlStateNormal];
+
+    //[self.processor performSelector:@selector(barcodeScanCancelled) withObject:nil afterDelay:0];
 }
 
 - (void)flipCameraButtonPressed:(id)sender
@@ -755,9 +757,6 @@ parentViewController:(UIViewController*)parentViewController
                        target:(id)self
                        action:@selector(cancelButtonPressed:)
                        ];
-    
-    [cancelButton setTitle:@"Annuler" forState:UIControlStateNormal];
-    
     
     id flexSpace = [[[UIBarButtonItem alloc] autorelease]
                     initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
@@ -817,6 +816,7 @@ parentViewController:(UIViewController*)parentViewController
     ;
     
     [overlayView addSubview: reticleView];
+    
     
     return overlayView;
 }

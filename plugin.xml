@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="com.creativevikings.plugins.jigglerscanner"
-    version="1.1.14">
+    version="1.1.15">
 
     <name>JigglerScanner</name>
     <description>JigglerScanner</description>
